@@ -1,0 +1,118 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Creating dummy env object to get spaces
+pybullet build time: Nov 28 2023 23:45:17
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+total num of parameters 1234778
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+argv[0]=
+Updates 20, num timesteps 17640, FPS 872
+ Last 100 training episodes: mean/median reward -26.5/-24.8, min/max reward -47.6/-18.9
+
+Updates 40, num timesteps 34440, FPS 964
+ Last 100 training episodes: mean/median reward -28.6/-26.6, min/max reward -46.6/-19.4
+
+Updates 60, num timesteps 51240, FPS 1007
+ Last 100 training episodes: mean/median reward -26.6/-25.5, min/max reward -53.8/-18.5
+
+Updates 80, num timesteps 68040, FPS 1029
+ Last 100 training episodes: mean/median reward -27.3/-26.4, min/max reward -44.5/-17.2
+
+Updates 100, num timesteps 84840, FPS 1042
+ Last 100 training episodes: mean/median reward -26.9/-25.2, min/max reward -50.4/-17.0
+
+Updates 120, num timesteps 101640, FPS 1052
+ Last 100 training episodes: mean/median reward -27.9/-26.5, min/max reward -47.4/-19.0
+
+Updates 140, num timesteps 118440, FPS 1054
+ Last 100 training episodes: mean/median reward -27.3/-25.4, min/max reward -52.7/-14.0
+
+Updates 160, num timesteps 135240, FPS 1061
+ Last 100 training episodes: mean/median reward -28.1/-26.2, min/max reward -51.9/-18.7
+
+Updates 180, num timesteps 152040, FPS 1065
+ Last 100 training episodes: mean/median reward -26.9/-25.2, min/max reward -43.6/-18.8
+

@@ -1,0 +1,34 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+pybullet build time: Nov 28 2023 23:45:17
+2026-09-16 05:11:41, INFO: robot FOV 2.000000
+2026-09-16 05:11:41, INFO: humans FOV 2.000000
+cuda
+2026-09-16 05:11:41, INFO: Create other envs with new settings
+data/pristine_check/checkpoints/237800.pt
+2026-09-16 05:11:41, INFO: Not randomize human's radius and preferred speed
+2026-09-16 05:11:41, INFO: Circle width: 4
+2026-09-16 05:11:41, INFO: robot FOV 6.283185
+2026-09-16 05:11:41, INFO: humans FOV 6.283185
+<Monitor<OrderEnforcing<CrowdSim3DTbObs<CrowdSim3DTbObs-v0>>>>
+Traceback (most recent call last):
+  File "/workspace/height_pristine/test.py", line 172, in <module>
+    main()
+  File "/workspace/height_pristine/test.py", line 167, in main
+    evaluate(actor_critic, envs, 1, device, config, logging, test_args)
+  File "/workspace/height_pristine/training/evaluation.py", line 79, in evaluate
+    obs = eval_envs.reset()
+  File "/workspace/height_pristine/training/networks/envs.py", line 192, in reset
+    obs = self.venv.reset()
+  File "/workspace/height_pristine/baselines/common/vec_env/dummy_vec_env.py", line 27, in reset
+    self._save_obs(e, env.reset())
+  File "/workspace/height_pristine/baselines/bench.py", line 10, in reset
+    result = self.env.reset(**kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/gym/wrappers/order_enforcing.py", line 18, in reset
+    return self.env.reset(**kwargs)
+  File "/workspace/height_pristine/crowd_sim/envs/crowd_sim_tb2.py", line 841, in reset
+    self.create_scenario(phase=phase, test_case=test_case)
+  File "/workspace/height_pristine/crowd_sim/envs/crowd_sim_tb2.py", line 606, in create_scenario
+    np.random.seed(counter_offset[phase] + self.case_counter[phase] + self.thisSeed)
+TypeError: unsupported operand type(s) for +: 'int' and 'NoneType'

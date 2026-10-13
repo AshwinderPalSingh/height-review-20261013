@@ -1,0 +1,4 @@
+BRANCH 2
+A: MATCHES HEIGHT (0/3 seeds significantly below; pooled +0.04 pp shown for reference only)
+B: NO ADVANTAGE AT MATCHED COMPUTE (0/3 seeds intrude significantly less than HEIGHT-350M) [against the released checkpoint alone: ADVANTAGE SHRUNK but significant (8% fewer; 3/3 seeds p<0.05; d=-0.07)]
+success mean 88.07 sd 0.90

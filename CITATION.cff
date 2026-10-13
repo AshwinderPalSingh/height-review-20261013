@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "HEIGHT Benchmark Analysis: code, evaluation logs and trajectory data"
+type: software
+license: MIT
+authors:
+  - name: "Anonymous authors (withheld for double-anonymous review)"
+keywords:
+  - social robot navigation
+  - crowd navigation
+  - reinforcement learning
+  - benchmark analysis
+  - reproducibility
+references:
+  - type: article
+    title: "HEIGHT: Heterogeneous Interaction Graph Transformer for Robot Navigation in Crowded and Constrained Environments"
+    authors:
+      - family-names: Liu
+        given-names: Shuijing
+      - family-names: Xia
+        given-names: Haochen
+      - family-names: Pouria
+        given-names: Fatemeh Cheraghi
+      - family-names: Hong
+        given-names: Kaiwen
+      - family-names: Chakraborty
+        given-names: Neeloy
+      - family-names: Hu
+        given-names: Zichao
+      - family-names: Biswas
+        given-names: Joydeep
+      - family-names: Driggs-Campbell
+        given-names: Katherine
+    journal: "IEEE Transactions on Automation Science and Engineering"
+    year: 2026
+    doi: 10.1109/TASE.2025.3646588

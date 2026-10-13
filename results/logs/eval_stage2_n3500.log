@@ -1,0 +1,13 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+pybullet build time: Nov 28 2023 23:45:17
+2026-09-03 10:49:15, INFO: robot FOV 2.000000
+2026-09-03 10:49:15, INFO: humans FOV 2.000000
+cuda
+2026-09-03 10:49:15, INFO: Create other envs with new settings
+data/stage2_HEIGHT_intention_occlusion/checkpoints/357141.pt
+2026-09-03 10:49:15, INFO: Not randomize human's radius and preferred speed
+2026-09-03 10:49:15, INFO: Circle width: 4
+2026-09-03 10:49:15, INFO: robot FOV 6.283185
+2026-09-03 10:49:15, INFO: humans FOV 6.283185

@@ -1,0 +1,100 @@
+==============================================================================
+  DEPLOYABLE SYSTEM -- predict_method=none -- SELF-INTERPRETING REPORT
+==============================================================================
+  seed 1: 3046/3500 successes = 87.03%   intrusion 5.1123 +/- 6.7022
+  seed 2: 3101/3500 successes = 88.60%   intrusion 5.2154 +/- 6.6294
+  seed 3: 3100/3500 successes = 88.57%   intrusion 5.2534 +/- 6.5383
+
+------------------------------------------------------------------------------
+  A. SUCCESS RATE vs HEIGHT (88.03%)
+------------------------------------------------------------------------------
+  mean +/- SD over 3 seeds : 88.07 +/- 0.90 %
+  HEIGHT                    : 88.03 %
+  ORACLE (truth futures)    : 88.08 +/- 0.49 %
+  one-sample t vs HEIGHT    : t=0.07 (df=2)
+  pooled z-test vs HEIGHT   : +0.04 pp  CI[-1.20, +1.28]  z=0.06  p=0.952
+    (pooled test treats 10500 episodes from 3 policies as one sample: it is
+     PSEUDO-REPLICATED and is shown for reference only; the verdict below uses
+     the per-seed tests, each n=3500 vs n=3500.)
+  seed 1 vs HEIGHT          : -1.00 pp  CI[-2.55, +0.55]  z=-1.27  p=0.205
+  seed 2 vs HEIGHT          : +0.57 pp  CI[-0.93, +2.08]  z=0.74  p=0.457
+  seed 3 vs HEIGHT          : +0.54 pp  CI[-0.96, +2.05]  z=0.71  p=0.480
+  privileged info was worth : +0.01 pp  (oracle minus deployable)
+  >> VERDICT A: MATCHES HEIGHT (0/3 seeds significantly below; pooled +0.04 pp shown for reference only)
+
+------------------------------------------------------------------------------
+  B. INTRUSION RATIO vs HEIGHT (5.6578 +/- 7.0961) -- lower is better
+------------------------------------------------------------------------------
+  pooled over 3 seeds (10500 episodes): 5.1937 +/- 6.6233
+  HEIGHT                              : 5.6578 +/- 7.0961
+  ORACLE (truth futures)              : 4.7471  (was -16.1% vs HEIGHT)
+  difference                          : -0.4641  (-8.2% relative)
+  Welch t / p / Cohen d               : t=-3.41  p=6.59e-04  d=-0.069
+    (pooled Welch is pseudo-replicated across policies; verdict uses per-seed tests)
+    seed 1 mean 5.1123  (-9.6% vs HEIGHT)  Welch t=-3.31 p=9.5e-04 d=-0.079
+    seed 2 mean 5.2154  (-7.8% vs HEIGHT)  Welch t=-2.70 p=7.0e-03 d=-0.064
+    seed 3 mean 5.2534  (-7.1% vs HEIGHT)  Welch t=-2.48 p=1.3e-02 d=-0.059
+  >> VERDICT B (vs the released checkpoint, confounded by training length): ADVANTAGE SHRUNK but significant (8% fewer; 3/3 seeds p<0.05; d=-0.07)
+
+------------------------------------------------------------------------------
+  B2. COMPUTE-MATCHED CONTROL: nopredict-350M vs HEIGHT fine-tuned to 350M
+------------------------------------------------------------------------------
+  HEIGHT-350M success : 3072/3500 = 87.77%
+    seed 1 vs HEIGHT-350M : -0.74 pp  z=-0.94  p=0.349
+    seed 2 vs HEIGHT-350M : +0.83 pp  z=1.07  p=0.283
+    seed 3 vs HEIGHT-350M : +0.80 pp  z=1.04  p=0.300
+  HEIGHT-350M intrusion: 5.3590 +/- 6.8315  (released HEIGHT was 5.6578: -5.3% from extra compute alone)
+    seed 1 vs HEIGHT-350M : 5.1123 (-4.6%)  Welch t=-1.52 p=1.3e-01 d=-0.036
+    seed 2 vs HEIGHT-350M : 5.2154 (-2.7%)  Welch t=-0.89 p=3.7e-01 d=-0.021
+    seed 3 vs HEIGHT-350M : 5.2534 (-2.0%)  Welch t=-0.66 p=5.1e-01 d=-0.016
+  >> VERDICT B2: 0/3 seeds intrude significantly less than the COMPUTE-MATCHED HEIGHT.
+     Against matched compute the advantage does not hold; the released-checkpoint
+     comparison was confounded by training length. Say so; do not claim it.
+
+  >> INTRUSION DECISION (uses B2): NO ADVANTAGE AT MATCHED COMPUTE (0/3 seeds intrude significantly less than HEIGHT-350M) [against the released checkpoint alone: ADVANTAGE SHRUNK but significant (8% fewer; 3/3 seeds p<0.05; d=-0.07)]
+
+==============================================================================
+  OVERALL VERDICT AND WHAT TO DO
+==============================================================================
+  BRANCH 2: success not significantly below HEIGHT but intrusion advantage is gone/n.s.
+  -> The paper stands as a DIAGNOSIS. Remove the "positive result" framing
+     from Sec. XI; keep Table XI as an ORACLE row labelled as such.
+  -> The 16%% was privileged-information-assisted; say so plainly.
+
+==============================================================================
+  LaTeX FOR THE \pending BLOCKS -- paste into paper3.tex
+==============================================================================
+
+% --- Table: deployable system (replaces the \pending table in Sec. XII) ---
+\begin{table}[t]
+\caption{Deployable system, \texttt{predict\_method\,=\,'none'}, $n=3{,}500$ per
+seed. No privileged information. HEIGHT: $88.03\%$ success, intrusion ratio $5.66$.}
+\label{tab:deployable}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+ & Seed 1 & Seed 2 & Seed 3 & Mean $\pm$ SD \\
+\midrule
+Success & 87.03\% & 88.60\% & 88.57\% & $88.07 \pm 0.90\%$ \\
+Intrusion ratio & 5.112 & 5.215 & 5.253 & $5.194$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% --- Abstract sentence (replaces the \pending in the abstract) ---
+Retrained without privileged futures, the system matches HEIGHT on success
+($88.07 \pm 0.90\%$); the intrusion advantage does not survive, and we report it as an
+oracle-assisted effect.
+
+% --- Sec. XII body paragraph ---
+The same architecture retrained with \texttt{predict\_method\,=\,'none'}---no
+trajectory prediction of any kind, occlusion inference retained---for $350$\,M steps
+across three seeds reaches $88.07 \pm 0.90\%$ success (Table~\ref{tab:deployable}),
+against HEIGHT's $88.03\%$ (per-seed $p=0.21, 0.46, 0.48$). Privileged ground-truth futures were
+therefore worth $+0.01$\,pp of success---an upper bound, since the oracle arm also
+received ${\sim}426$\,M steps against this arm's $350$\,M.
+The per-seed intrusion ratios are $5.112, 5.215, 5.253$ against HEIGHT's $5.658$ (per-seed Welch
+$p=9.5\times10^{-4}, 0.007, 0.013$).
+HEIGHT fine-tuned to a matched $350$\,M steps reaches $87.77\%$ success and an intrusion ratio of $5.359$; 0 of 3 seeds of the deployable system intrude significantly less than this compute-matched control.
+
+  verdict written to nplogs/NOPREDICT_VERDICT.txt

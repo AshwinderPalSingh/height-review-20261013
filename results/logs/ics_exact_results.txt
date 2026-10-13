@@ -1,0 +1,16 @@
+PAD=0.0    (391 collisions, 110 s)
+    0.5 s look-back: non-reactive   6/385 inevitable (  1.6%) | reactive  0/6  (0%) | aborted 0
+    1.0 s look-back: non-reactive   3/385 inevitable (  0.8%) | reactive  0/6  (0%) | aborted 0
+    2.0 s look-back: non-reactive   4/385 inevitable (  1.0%) | reactive  0/6  (0%) | aborted 0
+PAD=0.049  (391 collisions, 244 s)
+    0.5 s look-back: non-reactive  98/385 inevitable ( 25.5%) | reactive  3/6  (50%) | aborted 0
+    1.0 s look-back: non-reactive  30/385 inevitable (  7.8%) | reactive  0/6  (0%) | aborted 0
+    2.0 s look-back: non-reactive  20/385 inevitable (  5.2%) | reactive  0/6  (0%) | aborted 0
+PAD=0.1    (391 collisions, 658 s)
+    0.5 s look-back: non-reactive 265/385 inevitable ( 68.8%) | reactive  4/6  (67%) | aborted 0
+    1.0 s look-back: non-reactive 102/385 inevitable ( 26.5%) | reactive  1/6  (17%) | aborted 0
+    2.0 s look-back: non-reactive  46/385 inevitable ( 11.9%) | reactive  1/6  (17%) | aborted 0
+
+written to ics_full_results.json
+
+[exited with code 0]

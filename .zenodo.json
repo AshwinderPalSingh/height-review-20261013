@@ -1,0 +1,35 @@
+{
+  "title": "HEIGHT Benchmark Analysis: code, evaluation logs and trajectory data",
+  "upload_type": "software",
+  "description": "<p>Analysis code, evaluation logs and trajectory data for a study of what the HEIGHT crowd-navigation benchmark measures.</p><p>For the checkpoints tested, success responds strongly to one simulator setting, <code>robot.visible_prob</code>, the fraction of simulated pedestrians permitted to perceive the robot, which is held at 0.2 in published results on this benchmark. Sweeping it raises success from 88.5 to 98.8 percent. At the default setting, the interventions tested on the robot's side (an oracle with perfect pedestrian state, an added intention-prediction and occlusion-inference architecture, and a pedestrian-only rollout shield) and a 75 percent increase in the baseline's training did not improve success measurably.</p><p>This deposit contains: the analysis scripts (collision taxonomy, attribution and heading-threshold sensitivity, conflict-reduction responsibility, inevitable-collision search, pedestrian-only rollout shield, and the deployable-arm report) and fourteen experiment launchers; the complete modified HEIGHT source tree with documented post-run fixes, including an instrumented evaluation harness recording per-episode social metrics and trajectories, and the snapshot configuration of each run; the trained checkpoints behind every result; 156 evaluation logs, training logs, per-episode JSON dumps and analysis outputs, including the three-seed retrain without privileged futures; versioned re-analyses (a closed-window inevitable-collision search and a revised collision taxonomy) with fixtures for each code change; a statistics and figure driver that regenerates every statistic and figure in the accompanying paper from these inputs without a GPU, recording the SHA-256 of each input; the archived package listing whose capture time and association with individual historical runs are unestablished; and two trajectory dumps (780 episodes, and 805 from a repeat evaluation) with per-timestep robot and pedestrian state, pedestrian reactivity flags and per-episode static obstacle geometry. Known measurement issues are documented in the README.</p><p>The source tree and evaluation harness derive from the HEIGHT codebase by Liu et al., distributed under the MIT License, and the released HEIGHT checkpoint included for convenience is theirs.</p>",
+  "creators": [
+    {
+      "name": "Anonymous authors (withheld for double-anonymous review)"
+    }
+  ],
+  "license": "mit",
+  "access_right": "open",
+  "keywords": [
+    "social robot navigation",
+    "crowd navigation",
+    "reinforcement learning",
+    "benchmark analysis",
+    "reproducibility",
+    "pedestrian simulation",
+    "statistical evaluation"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "arXiv:2411.12150",
+      "relation": "isDerivedFrom",
+      "resource_type": "publication-article",
+      "scheme": "arxiv"
+    },
+    {
+      "identifier": "https://github.com/Shuijing725/CrowdNav_HEIGHT",
+      "relation": "isDerivedFrom",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ]
+}

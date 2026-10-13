@@ -1,0 +1,13 @@
+ics_analysis_v2 2026-10-13  pad=0.000  eligibility=historical
+collision episodes searched: 391   excluded: 1
+  excluded: {'episode': 3060, 'outcome': 'CollisionObs', 'n_steps': 24, 'reason': 'too few recorded states'}
+look-back non-reactive nearest pedestrian                  reactive
+0.5 s     6/385 no escape (1.6%) [initial 2, none 4, aborted 0] 0/6 no escape (0.0%) [initial 0, none 0, aborted 0]
+1.0 s     3/385 no escape (0.8%) [initial 2, none 1, aborted 0] 0/6 no escape (0.0%) [initial 0, none 0, aborted 0]
+2.0 s     4/385 no escape (1.0%) [initial 2, none 2, aborted 0] 0/6 no escape (0.0%) [initial 0, none 0, aborted 0]
+witness replays failed: 0
+fixed-start monotonicity: 391 episodes, 0 violations
+A survives_horizon verdict means one nominal action sequence stays outside the padded
+envelope at every sample from the start through the last recorded state, under the
+model described in the module header. It is not a certified escape in the simulator.
+written to results/v2/ics_v2_pad0.0.json

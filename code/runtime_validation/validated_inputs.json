@@ -1,0 +1,700 @@
+{
+  "scope": "Exact tested source, configs and weights; Finder metadata excluded",
+  "files": [
+    {
+      "path": "checkpoints/exp_heightft/178570.pt",
+      "bytes": 1929806,
+      "sha256": "4910929d0fa32b3cfbaae2a2d30bf9d1f4da2c3ee17a4dffa0c1d04e46a09aac"
+    },
+    {
+      "path": "checkpoints/exp_nopredict_s1/416665.pt",
+      "bytes": 9572278,
+      "sha256": "8808e74c4498d4ccb757c8d5d0a81f00844643d3ec948c7d1bf2ff8d026ace08"
+    },
+    {
+      "path": "checkpoints/exp_nospeak_s1/59522.pt",
+      "bytes": 9573194,
+      "sha256": "11cf217368b1544a05c84883422f9e7af89f628bebbf318475cec88885b839ac"
+    },
+    {
+      "path": "checkpoints/occlusion_vae/label_vae_weight_300.pth",
+      "bytes": 4603158,
+      "sha256": "70c1e9ad3f867011fa0f244af9ba80cd143990a6350bd65df278637ccdd3cacd"
+    },
+    {
+      "path": "configs/runs/exp_heightft/config.py",
+      "bytes": 38165,
+      "sha256": "be80266a123cbc3286d78796781b61830b02dbc3741ec6f60b2dc43f2ad5cc23"
+    },
+    {
+      "path": "configs/runs/exp_nopredict_s1/config.py",
+      "bytes": 37108,
+      "sha256": "8111f1e1ea306218cfa84c41f4babf729845e0774d86d5a1821b60dd5958e10f"
+    },
+    {
+      "path": "configs/runs/exp_nospeak_s1/config.py",
+      "bytes": 36870,
+      "sha256": "7b73a82ee513ab32756ccdf3b78f522d0e0f60b5bf3d62b1f699173360a9f154"
+    },
+    {
+      "path": "source/baselines/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source/baselines/bench.py",
+      "bytes": 967,
+      "sha256": "638c3674a5ab3021f11ed8e614011862fe86843e827f43216e9e99d3f4bbf5f2"
+    },
+    {
+      "path": "source/baselines/common/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source/baselines/common/atari_wrappers.py",
+      "bytes": 106,
+      "sha256": "d9a8951727bebb3c1a0e3dce3ab0329f661c38af33caaa8f005454ce29aac9f4"
+    },
+    {
+      "path": "source/baselines/common/vec_env/__init__.py",
+      "bytes": 43,
+      "sha256": "16c02bd780603c5a1396830e4be658bd4e1f474b106c4cbdde4dbb654856c81e"
+    },
+    {
+      "path": "source/baselines/common/vec_env/dummy_vec_env.py",
+      "bytes": 2227,
+      "sha256": "e03aa0050aca0af6dbe487e67fd5d1536667fc43bb27e87df4236c5a7bb937f8"
+    },
+    {
+      "path": "source/baselines/common/vec_env/util.py",
+      "bytes": 747,
+      "sha256": "a5d6c24747f0a83ebf205c89d914bedb444dce6db48e3ab2f112b587ff60b230"
+    },
+    {
+      "path": "source/baselines/common/vec_env/vec_env.py",
+      "bytes": 1800,
+      "sha256": "417895274c0d43e12b4aa9f71454e49f361c9d04db8f19332c1789809d7b9a02"
+    },
+    {
+      "path": "source/baselines/common/vec_env/vec_normalize.py",
+      "bytes": 318,
+      "sha256": "f18af36fe75592d0d90892d72c6825513ded7f66b89e65ef67b1b447a830774a"
+    },
+    {
+      "path": "source/baselines/logger.py",
+      "bytes": 342,
+      "sha256": "cd147397df4095d57a465802bfa7c6f1938974d7be01ff5e2d5af5b0fc0ddef0"
+    },
+    {
+      "path": "source/cbf_filter.py",
+      "bytes": 7606,
+      "sha256": "978e12b6e48f269dda754a992808122f8c29fab5f686a53f2be0d89e3270d72f"
+    },
+    {
+      "path": "source/check_env.py",
+      "bytes": 2382,
+      "sha256": "d7522c219e49c676cf1b64980382ec7d38adde82530b04000ef7c68c6d614d6c"
+    },
+    {
+      "path": "source/collect_occlusion_data.py",
+      "bytes": 2877,
+      "sha256": "897094cf8cc2516d0ecc4f5313a3d2883c2e836c4351ce077d7553b59a37bef1"
+    },
+    {
+      "path": "source/crowd_nav/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source/crowd_nav/configs/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source/crowd_nav/configs/config.py",
+      "bytes": 36836,
+      "sha256": "8da401a6bcbaf67e313fbb6b387afe0db568e69aac328d00d269096780eba542"
+    },
+    {
+      "path": "source/crowd_nav/policy/dwa.py",
+      "bytes": 16646,
+      "sha256": "f2e3123e10acb2f2a5a6b0c4c13a9aaf7a234e5d0426d4ae194b7fc800f8237e"
+    },
+    {
+      "path": "source/crowd_nav/policy/orca.py",
+      "bytes": 6619,
+      "sha256": "5eac699b466fbba4cbd2014eb6962f422d99d4c894e8e58667986222e24c5341"
+    },
+    {
+      "path": "source/crowd_nav/policy/policy.py",
+      "bytes": 889,
+      "sha256": "ed6386685c29b2a8089cf41f7a53fc323cb0a8f39af38851bceeac0cd02d28c7"
+    },
+    {
+      "path": "source/crowd_nav/policy/policy_factory.py",
+      "bytes": 621,
+      "sha256": "6abafaae653524fcd578198593aa3629776422386f9360a5316dd9502b703b79"
+    },
+    {
+      "path": "source/crowd_nav/policy/social_force.py",
+      "bytes": 2362,
+      "sha256": "8869d43d9647d5c7157644ac4385af0cad2141c672ac65bfcb036b1b6c698766"
+    },
+    {
+      "path": "source/crowd_nav/policy/srnn.py",
+      "bytes": 2177,
+      "sha256": "c4c77032474bdb90c32677f51caf0c561368e5a3149ff82ecddc2bac252800e1"
+    },
+    {
+      "path": "source/crowd_sim/README.md",
+      "bytes": 2609,
+      "sha256": "02989f5441797abad04065e7ace38b587ec2f71c8ed327ee90b5de9e4286976f"
+    },
+    {
+      "path": "source/crowd_sim/__init__.py",
+      "bytes": 605,
+      "sha256": "040a4269b5eac221553dd3efb2eab61d4fcae7681b23c77d3765dd3a1dde1883"
+    },
+    {
+      "path": "source/crowd_sim/envs/__init__.py",
+      "bytes": 285,
+      "sha256": "7e432cb86f5633b3622bd945db65cdbff82f65737ea4193e820b5a372202dc11"
+    },
+    {
+      "path": "source/crowd_sim/envs/crowd_sim.py",
+      "bytes": 64469,
+      "sha256": "ac10c46b75cb24515bb8c11ae5d9f0e9e79faee2d425fba4f78309c0412a477d"
+    },
+    {
+      "path": "source/crowd_sim/envs/crowd_sim_tb2.py",
+      "bytes": 61793,
+      "sha256": "5355816793c0a95916b4a6edb893d3cf82f86d1a276ab582cacc628222d8b589"
+    },
+    {
+      "path": "source/crowd_sim/envs/crowd_sim_tb2_obs.py",
+      "bytes": 38528,
+      "sha256": "0b547b0fcbc13dc02aae35a848e41c11ba1bf71713f7ec22ea999e04a13eb257"
+    },
+    {
+      "path": "source/crowd_sim/envs/crowd_sim_tb2_obs_hierarchy.py",
+      "bytes": 22817,
+      "sha256": "7f747fb4bc2ffa7a67eb2ad78a42bcf89a32d7804e348b60823569d3d47d249e"
+    },
+    {
+      "path": "source/crowd_sim/envs/crowd_sim_tb2_sim2real.py",
+      "bytes": 8484,
+      "sha256": "272b4acbcd96a3dac446e3aa3a22277d224f4dffda678d3026887b2e998a2532"
+    },
+    {
+      "path": "source/crowd_sim/envs/crowd_sim_var_human.py",
+      "bytes": 41687,
+      "sha256": "56d07021419b1a9f491a2ec23e5d495ffd7042dfa3ed6fb73e0e7cd1a19f77af"
+    },
+    {
+      "path": "source/crowd_sim/envs/occlusion_grid.py",
+      "bytes": 8792,
+      "sha256": "aaa6d623a448e2d61a96fcc3dd6a8d5d9ba9320d69e30f93cdcfe464796010d6"
+    },
+    {
+      "path": "source/crowd_sim/envs/planning_utils/Astar_with_clearance.py",
+      "bytes": 8860,
+      "sha256": "eb2fca0c77c1385da14cda8b75b59a4bd3d1fefbe231f427a003687d6c457f30"
+    },
+    {
+      "path": "source/crowd_sim/envs/ros_turtlebot2i_env.py",
+      "bytes": 22729,
+      "sha256": "383d3cf09d368d0b1f1115a684d1520107b69f167ce4417991e9f724acedb1bf"
+    },
+    {
+      "path": "source/crowd_sim/envs/utils/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source/crowd_sim/envs/utils/action.py",
+      "bytes": 132,
+      "sha256": "643a2ebf410f503e8d667baa154d12254eaa9efcbbb45cd1ab265fb31887ed5b"
+    },
+    {
+      "path": "source/crowd_sim/envs/utils/agent.py",
+      "bytes": 7460,
+      "sha256": "369f3b1eb719faa993e52510ac539ee82ba42448df600974f7a33400396a7bce"
+    },
+    {
+      "path": "source/crowd_sim/envs/utils/human.py",
+      "bytes": 2673,
+      "sha256": "ec594345b574f7c8cef9243cab6cb0e306f2bd4c3a1148f4d34d12b8f3e2bfba"
+    },
+    {
+      "path": "source/crowd_sim/envs/utils/info.py",
+      "bytes": 976,
+      "sha256": "c02572d72c7748e04efb5faabc0b2e279dd6c01bd396e654c8fe5dff69f7d59f"
+    },
+    {
+      "path": "source/crowd_sim/envs/utils/recorder.py",
+      "bytes": 8110,
+      "sha256": "e9827e2008f4922e9726714a1e86707602852eddfdc7f839ecb2ae125a5e96c3"
+    },
+    {
+      "path": "source/crowd_sim/envs/utils/robot.py",
+      "bytes": 1028,
+      "sha256": "13f678c8de8abfa4ad5daa6309a61ae13da0ffdfaea705b7ac576b3fdf8572e3"
+    },
+    {
+      "path": "source/crowd_sim/envs/utils/state.py",
+      "bytes": 4012,
+      "sha256": "386280415ffd1ae88e0257da0be4cff2d87c227fb427761ea84023d5c7d06d18"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/arena/arena_wall/arena_wall.blend",
+      "bytes": 518844,
+      "sha256": "d0bc031aa262f8d25f4b430859a3bf22870a3c0242dd887e2375cb2d1fe724ad"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/arena/arena_wall/arena_wall.mtl",
+      "bytes": 462,
+      "sha256": "1e911fb00f6caeb3a453642164d2be50e01aea94cce2f62941a729be9e76267d"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/arena/arena_wall/arena_wall.obj",
+      "bytes": 2143,
+      "sha256": "530605e55747111f72f1a1014b476b602c66be2898ea6b165cb20489c55f5023"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/arena/arena_wall/arena_wall.urdf",
+      "bytes": 828,
+      "sha256": "fc4bddbe1a524ca638d82feac5280f6dbc1b7dae89c3d140e351dba778530d56"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/arena/arena_wall/white_wall.png",
+      "bytes": 248346,
+      "sha256": "004ad8642bfb7d70be61239b4868282f7260b133309fdeb8709ba980d0dd6e42"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/arena/floor/checker_blue.png",
+      "bytes": 6379,
+      "sha256": "266d8e7010b8d615c873c27dccb4eca37e79035bd24efdca0b54eeb74a9fa419"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/arena/floor/plane.mtl",
+      "bytes": 255,
+      "sha256": "421de8c371462058b3eaa022fe19aad28c32524603d9c3b72c3bee1995a7a652"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/arena/floor/plane.obj",
+      "bytes": 349,
+      "sha256": "0cc3ec11a128956c6888a3ef8a79edaa279cd70e0df7ab96f7749e24f55067f5"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/arena/floor/plane.urdf",
+      "bytes": 679,
+      "sha256": "de8871c4caba38a5e8b703f005bb45b48a711455c580319c4e5050d95fa1c79a"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot.urdf",
+      "bytes": 27003,
+      "sha256": "b12c7f1211f43710e360585bc45a15e10815966f9cd603cbd10fafbac6ba0a11"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/kobuki_description/meshes/images/main_body.jpg",
+      "bytes": 572845,
+      "sha256": "4a922225298c5708e9d5f779698256ed5e9ef2a4744cc943bb13d27bdbc00314"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/kobuki_description/meshes/images/wheel.jpg",
+      "bytes": 94668,
+      "sha256": "a17c56ca928ee7b2d18d15b1bb57c5bc6a8d49cf8ece679c93c380e061aa5738"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/kobuki_description/meshes/main_body.dae",
+      "bytes": 757378,
+      "sha256": "35bd40d74e6f254250a6eae55bfb903f50b78cbb08c22677f27c3e0859d40358"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/kobuki_description/meshes/wheel.dae",
+      "bytes": 420420,
+      "sha256": "56c17199eb3a6f522da651d9ca6d3b6b58fe543482b22ce77c09090540698cdc"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/sensors/asus_xtion_pro_live.dae",
+      "bytes": 381584,
+      "sha256": "aa32ad33abc0d1ebec68acbe49681dac7ec81e8591f1bbe2707443ffb4f70b59"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/sensors/asus_xtion_pro_live.png",
+      "bytes": 14044,
+      "sha256": "0276b0701934ad9bc10d00702f9b156bc2c0c6c05f61b238382be4ec04929697"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/sensors/kinect.dae",
+      "bytes": 576739,
+      "sha256": "86abf645bc6940b85ac98cc77110936794b007b5c6d8670ca47760e9ec8e271c"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/sensors/kinect.jpg",
+      "bytes": 45027,
+      "sha256": "1e5a4a904b918e224a6e2c55fc3051d195598515ba7ba3098b7503be00f75a05"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/sensors/kinect.tga",
+      "bytes": 47572,
+      "sha256": "a6ba5b15b5cac0bbaccc101a8b1831035dfc21326ffc874531d03ded65494c03"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/images/1f_pole.jpg",
+      "bytes": 135104,
+      "sha256": "0bb3b26bd4dba3cc229e8b6c669a810c06cb6f7aa241eea86c8f9b4accb622d7"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/images/1f_stack.jpg",
+      "bytes": 84215,
+      "sha256": "4f0d8e08d8db3a059b682609f0df32bbb09b7b2ea407a81f282be0b6f2396404"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/images/2f_pole.jpg",
+      "bytes": 135247,
+      "sha256": "73609bcaadc8c10c0e54578221a052bb84b021c73906181bf2d45d97d72dc5f0"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/images/2f_stack.jpg",
+      "bytes": 70709,
+      "sha256": "d71823ecf161e117c93fa25de45d08ee98ab7a8043fa2b1396c6031a2bfbc901"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/images/3f_pole.jpg",
+      "bytes": 134998,
+      "sha256": "2ea28c2728d775586c92c14e3a575e3468d0316d2206950e736690d35742bf3e"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/images/3f_stack.jpg",
+      "bytes": 182430,
+      "sha256": "3bfd71b84c2a09d5a05b8495999f81bfdee37a0e3e4fcb424491e001e6964ea4"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/images/3f_stack1.jpg",
+      "bytes": 86509,
+      "sha256": "de3c528b61a9e46282608f3b84985029ddbc39da58d1262df9d11e3b2ce29b66"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/images/kinect_pole.jpg",
+      "bytes": 135009,
+      "sha256": "70292b1d420aa9d0426536dc12567c2a3df6779d4bffb83436d8c2c22cdbb902"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/images/kinect_pole_old.jpg",
+      "bytes": 135009,
+      "sha256": "70292b1d420aa9d0426536dc12567c2a3df6779d4bffb83436d8c2c22cdbb902"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/plate_bottom.dae",
+      "bytes": 46317,
+      "sha256": "cf3a873a26840e8d1f43817e19386d681797d96bf0441f49d5b8aef81123656e"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/plate_middle.dae",
+      "bytes": 95216,
+      "sha256": "cc8f7e798126097c5d78dfcc4f33832a48e8c012246a87b40746440b632551da"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/plate_top.dae",
+      "bytes": 95269,
+      "sha256": "d3aad17c22b75bb40ad941dda6acd63cd63ff8ac7740f492c706f7ee0916f70b"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/pole_bottom.dae",
+      "bytes": 48606,
+      "sha256": "dbce8f7293eb90a7b51eeabdcb0924240834f40e940045d7a31255546116b6cb"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/pole_kinect.dae",
+      "bytes": 69147,
+      "sha256": "adc50b832370b68615634829318be27609ec24e2016f9c177b4fbfb58d479013"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/pole_middle.dae",
+      "bytes": 56461,
+      "sha256": "908c7949a9731394355fd714969af915a16a1f9808d46118e8eebc8bae59445b"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/media/turtlebot2/turtlebot/turtlebot_description/meshes/stacks/hexagons/pole_top.dae",
+      "bytes": 23969,
+      "sha256": "c7be270e0ccca218d9e71e36fb6ffe9f8cddc7a546c2c6494e307a927d008b7b"
+    },
+    {
+      "path": "source/crowd_sim/pybullet/scene_abstract.py",
+      "bytes": 4207,
+      "sha256": "c289806cbaad05a83b5ba8f8a9eedd01b4d96e0fdb1b6be78c0eff4b7668fd77"
+    },
+    {
+      "path": "source/plot.py",
+      "bytes": 1120,
+      "sha256": "ed94078d923bb621da249470a33c0d49671e4a5aea18b3ceb99968dbf92e34aa"
+    },
+    {
+      "path": "source/pretrain_occlusion_vae.py",
+      "bytes": 4525,
+      "sha256": "58b113367e32d36138eecb04182e2f78fc2a534eb414336cfc5208f7c9b0f06c"
+    },
+    {
+      "path": "source/pybullet_envs/__init__.py",
+      "bytes": 70,
+      "sha256": "0232ea1f7b6643c7f779a07e3320f0f65c68eadabc56a271c3ee701284a43077"
+    },
+    {
+      "path": "source/real_world_instruction.txt",
+      "bytes": 4767,
+      "sha256": "5d9bc15cd6d02f9d92088258de69a6915134df0c75348f62d0b2d24fba77dda4"
+    },
+    {
+      "path": "source/requirements.txt",
+      "bytes": 91,
+      "sha256": "5a78409c291cd03320133cd613689cfbf88f7b22d5d157b266dc9d5daffae079"
+    },
+    {
+      "path": "source/roboschool.py",
+      "bytes": 66,
+      "sha256": "a956b5a3e4b0284e8dd2501cdefb9dd5dbd73a31bc62b5e02305aeab1681988a"
+    },
+    {
+      "path": "source/set_config_value.py",
+      "bytes": 2298,
+      "sha256": "3f20ae9146c8ef3f69d464436a8ffe0fa1710706dd16ab83fbcca8b8c0c9892e"
+    },
+    {
+      "path": "source/test.py",
+      "bytes": 6078,
+      "sha256": "9ab4d76ae0534d79d97d68bba4a2602c5cf8c7f90826aaa41676fc2b35e9c933"
+    },
+    {
+      "path": "source/test_gst_predictor.py",
+      "bytes": 2108,
+      "sha256": "b15a02043fc9c9b28306b34f4eeb6c3dc0f8ba17054bc03d3f00a09738dfc234"
+    },
+    {
+      "path": "source/test_less_human.py",
+      "bytes": 5771,
+      "sha256": "0536e878a37c744d2773bf9b3dad2d1dc0cfdcdc6a4fdee51028626274c9d902"
+    },
+    {
+      "path": "source/test_less_obs.py",
+      "bytes": 5865,
+      "sha256": "1d13b184fe035200792b643e585f43d8103c51dcafb61393bb71f2396816712a"
+    },
+    {
+      "path": "source/test_more_human.py",
+      "bytes": 5917,
+      "sha256": "6b9c6ef6854273408ef92d87cf0709ca20e3a4ab0a1663d3bb64c59785b03cc9"
+    },
+    {
+      "path": "source/test_more_obs.py",
+      "bytes": 5818,
+      "sha256": "765800e406ded74b8fcb1b765a32e2da248c56a94afb03ac2fd106b71d5f21d7"
+    },
+    {
+      "path": "source/train.py",
+      "bytes": 10707,
+      "sha256": "a8a89704485541db6439790546f23efed5511f7691eae18fc85a30c37d3896b6"
+    },
+    {
+      "path": "source/training/.gitignore",
+      "bytes": 1203,
+      "sha256": "8fd95d23670f8565f83e9b76ce9275eb5ad752b990e1577ecc27a5b60287bec9"
+    },
+    {
+      "path": "source/training/algo/__init__.py",
+      "bytes": 20,
+      "sha256": "c3b7c86b4f108d96985df32616af340f657425d3a35481c2d7f1d73952a47fe6"
+    },
+    {
+      "path": "source/training/algo/ppo.py",
+      "bytes": 4692,
+      "sha256": "f78a604a0ffea63e34a9a342a2a6685dcdc544499df1c9c858cc0415b5f10a72"
+    },
+    {
+      "path": "source/training/evaluation.py",
+      "bytes": 25177,
+      "sha256": "92b4c1961080047de5b839670d801fe52ce7d435af080d32c1a34a932d093141"
+    },
+    {
+      "path": "source/training/networks/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source/training/networks/distributions.py",
+      "bytes": 2767,
+      "sha256": "5de857f0a4ec2abfb01abed9738d94dce5c2224df237335b851c6c12e5fa2e4e"
+    },
+    {
+      "path": "source/training/networks/dsrnn_obs_vertex.py",
+      "bytes": 13930,
+      "sha256": "765f139c8b65897cb2691848d1e97bbd0dd779774229b7a789667161acf91c8e"
+    },
+    {
+      "path": "source/training/networks/envs.py",
+      "bytes": 10287,
+      "sha256": "8e2c3d3fca214106eaccc12d3f0e31f95db35565f82eb24f105afdcfe8881187"
+    },
+    {
+      "path": "source/training/networks/homo_transformer_obs.py",
+      "bytes": 7173,
+      "sha256": "dff63b723571035f0048296ead03473191370d13ece3c3cc9f0d1e62c9139924"
+    },
+    {
+      "path": "source/training/networks/model.py",
+      "bytes": 2960,
+      "sha256": "046627d2fd7da288a6157d3f323867bddfbb9b88f67be26989447c5f31efd97f"
+    },
+    {
+      "path": "source/training/networks/network_utils.py",
+      "bytes": 6243,
+      "sha256": "96a7f0b3df953897094377f77355365231ef9831a54328d990cbb86a6081ed14"
+    },
+    {
+      "path": "source/training/networks/occlusion_vae.py",
+      "bytes": 5143,
+      "sha256": "0923cd78e895fbdaa77db613ab8b086536503a0a7715c840c1375b0791f46687"
+    },
+    {
+      "path": "source/training/networks/raw_sensor_models.py",
+      "bytes": 8684,
+      "sha256": "4041093b1d0d4107474f4c86f0c643fa20fb4441ec1e8e96d07f01cf70b3af2b"
+    },
+    {
+      "path": "source/training/networks/selfAttn_srnn_merge.py",
+      "bytes": 22103,
+      "sha256": "d7c18df2decb57968ac91c23c1fe1716463d8ffddde224ebec449c970e84ee97"
+    },
+    {
+      "path": "source/training/networks/selfAttn_srnn_merge_lidar.py",
+      "bytes": 5280,
+      "sha256": "6b13288d858bdda7d40141443eb6d2d47ef3aaf276fb08ac5e6d472ea99b8082"
+    },
+    {
+      "path": "source/training/networks/shmem_vec_env.py",
+      "bytes": 6861,
+      "sha256": "d7d969fab33a258672ce4b4b5d5de78e12b700897e89dc720de0c3c0a80ad759"
+    },
+    {
+      "path": "source/training/networks/storage.py",
+      "bytes": 12192,
+      "sha256": "d74cadf2f71f8b52f89675b57b84c685c642773ea5f0155fcbe26ac442eac176"
+    },
+    {
+      "path": "source/training/networks/utils.py",
+      "bytes": 1060,
+      "sha256": "1be1f621c30affee25dde2664d50f41e5553084ec19963629c5623ba48b5e322"
+    },
+    {
+      "path": "source/training/prediction/gst_predictor.py",
+      "bytes": 4587,
+      "sha256": "4b6bb02c55849be0dceb54115963d63f6cd5cfebd339dadd59e4e1e8eb44b283"
+    },
+    {
+      "path": "source/training/prediction/gumbel_social_transformer/edge_selector_ghost.py",
+      "bytes": 7563,
+      "sha256": "c1c3a3eeaecd2f0d53e98ec41e47c1c88c54e4b8abeeb24ecd904592c871a06f"
+    },
+    {
+      "path": "source/training/prediction/gumbel_social_transformer/edge_selector_no_ghost.py",
+      "bytes": 6176,
+      "sha256": "1e2bcc7a334430689567daf079937ab4fd3c4e2f43ccf5e470735c3baf011346"
+    },
+    {
+      "path": "source/training/prediction/gumbel_social_transformer/gumbel_social_transformer.py",
+      "bytes": 5177,
+      "sha256": "ff19fc068db42f81dbdfe8915a256e55e689ba5afb609d12b2714a6268e99a8b"
+    },
+    {
+      "path": "source/training/prediction/gumbel_social_transformer/mha.py",
+      "bytes": 14447,
+      "sha256": "e0b15612d81733ba93500608c1bac3f3b524aeaee38192b3b3e7d591883ccd55"
+    },
+    {
+      "path": "source/training/prediction/gumbel_social_transformer/node_encoder_layer_ghost.py",
+      "bytes": 4009,
+      "sha256": "c17c66a58cbb8356b5dedc78c5ab32ca426f77f725395d3c102a0e268a365da9"
+    },
+    {
+      "path": "source/training/prediction/gumbel_social_transformer/node_encoder_layer_no_ghost.py",
+      "bytes": 3679,
+      "sha256": "bda694a0f78319aec06d6d6587f0655be577349ac52fde1e978bb6fb4245b1a9"
+    },
+    {
+      "path": "source/training/prediction/gumbel_social_transformer/pathhack.py",
+      "bytes": 154,
+      "sha256": "acbb4b2fb82f4d29fa71473f38d34f09f9f7260ddba134d1755811aa9ea60df2"
+    },
+    {
+      "path": "source/training/prediction/gumbel_social_transformer/st_model.py",
+      "bytes": 28291,
+      "sha256": "5fbfe1a63d1cf4e3f7acce0d03edc99b1e021b1ca2c6041ee851e35d9ddaf934"
+    },
+    {
+      "path": "source/training/prediction/gumbel_social_transformer/temperature_scheduler.py",
+      "bytes": 789,
+      "sha256": "421f55c2dab468633cdc026741902fb4ea5ab363ee357b65e49551d9ecbe48ba"
+    },
+    {
+      "path": "source/training/prediction/gumbel_social_transformer/temporal_convolution_net.py",
+      "bytes": 2390,
+      "sha256": "432cd8775a2c064af099b963c206e169ea779649ea05f7ac473a8c7766c139f5"
+    },
+    {
+      "path": "source/training/prediction/gumbel_social_transformer/utils.py",
+      "bytes": 1318,
+      "sha256": "0d347863646feb350bb85af2930501de46eafe7899a194877c85b5e6a0dbf219"
+    },
+    {
+      "path": "source/training/prediction/mgnn/batch_trajectories.py",
+      "bytes": 1942,
+      "sha256": "7352d30e4f3853a4940c564eb81933c297aa24e6e005535b18f25226d0bac85c"
+    },
+    {
+      "path": "source/training/prediction/mgnn/trajectories.py",
+      "bytes": 8216,
+      "sha256": "87b2b4c210c43dd4a726b8fd2139e97bed1d79edd38636fc2e9eab8670eafcbc"
+    },
+    {
+      "path": "source/training/prediction/mgnn/trajectories_sdd.py",
+      "bytes": 8994,
+      "sha256": "8777102ce1406108b9b9a0d366265ac96015d7a8d7455aa2332bef7668f43835"
+    },
+    {
+      "path": "source/training/prediction/mgnn/trajectories_trajnet.py",
+      "bytes": 13295,
+      "sha256": "c395bb9c28c46e96df3b854823a9ba0a9c5e9a4b6d2ffdfa251a6d5954f58f4e"
+    },
+    {
+      "path": "source/training/prediction/mgnn/trajectories_trajnet_testset.py",
+      "bytes": 13303,
+      "sha256": "9be848c6f3b859a2afc99a96ae878f48408ad5b1251dfd6fd4dbd13cb019b3cd"
+    },
+    {
+      "path": "source/training/prediction/mgnn/utils.py",
+      "bytes": 9521,
+      "sha256": "fe359adaab0db8ddbd09d74991ceb114e94b73e38f14b5d30379665aa43e2d4f"
+    },
+    {
+      "path": "source/training/prediction/pec_net/config/optimal.yaml",
+      "bytes": 600,
+      "sha256": "9941fde933fc9785648bc32e79261006379df87c875913e0a631f79e3d7704c1"
+    },
+    {
+      "path": "source/training/prediction/pec_net/sdd_trajectories.py",
+      "bytes": 1991,
+      "sha256": "31c7d979e5cb1a75716ea18352a9b747460ff42f93c16a1beb6f38bb1b104b41"
+    },
+    {
+      "path": "source/training/prediction/pec_net/social_utils.py",
+      "bytes": 7565,
+      "sha256": "9219bafa4215f366146c32256c056c935fe53e0aa8daadda13dfc303f059688a"
+    }
+  ]
+}

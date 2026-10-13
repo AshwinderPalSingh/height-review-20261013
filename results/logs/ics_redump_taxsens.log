@@ -1,0 +1,39 @@
+human-collision episodes: 336
+
+======================================================================
+1. ATTRIBUTION SENSITIVITY
+======================================================================
+margin 0.05 m:
+   ambiguous (2nd human within margin)   :   6 / 336  (1.8%)
+   ambiguous AND flags differ (flip risk):   0 / 336  (0.0%)
+   non-reactive share, nearest-as-is     : 99.7%  z=8.33
+   non-reactive share, PESSIMISTIC       : 99.7%  z=8.33  p=7.8e-17
+
+margin 0.10 m:
+   ambiguous (2nd human within margin)   :  13 / 336  (3.9%)
+   ambiguous AND flags differ (flip risk):   0 / 336  (0.0%)
+   non-reactive share, nearest-as-is     : 99.7%  z=8.33
+   non-reactive share, PESSIMISTIC       : 99.7%  z=8.33  p=7.8e-17
+
+margin 0.20 m:
+   ambiguous (2nd human within margin)   :  39 / 336  (11.6%)
+   ambiguous AND flags differ (flip risk):   7 / 336  (2.1%)
+   non-reactive share, nearest-as-is     : 99.7%  z=8.33
+   non-reactive share, PESSIMISTIC       : 97.6%  z=7.33  p=2.3e-13
+
+READ: the PESSIMISTIC row resolves every ambiguous case AGAINST the finding.
+  If it stays far above the 82.4% base rate with a large z, the attribution
+  method cannot be what produced the result.
+
+======================================================================
+2. HEADING-CHANGE THRESHOLD SENSITIVITY
+======================================================================
+threshold  never changed heading 
+15 deg     111 / 336  (33.0%)
+20 deg     152 / 336  (45.2%)
+29 deg     203 / 336  (60.4%)
+45 deg     252 / 336  (75.0%)
+60 deg     263 / 336  (78.3%)
+
+READ: if "never changed heading" stays a clear majority across 15-60 deg, the
+  claim that sudden goal-changes are a MINORITY mechanism is threshold-robust.

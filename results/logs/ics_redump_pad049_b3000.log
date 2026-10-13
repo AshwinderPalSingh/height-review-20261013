@@ -1,0 +1,16 @@
+collision episodes analysed : 391  (CollisionHuman=336, CollisionObs=50, CollisionWall=5)
+CAVEAT: replay is exact for the COLLIDING pedestrian when it is non-reactive; other
+  reactive pedestrians (17.6% of the population) would in reality have responded to the
+  counterfactual robot motion. Their recorded paths are used as-is. State this in the paper.
+
+horizon    NON-REACTIVE humans (exact)  reactive (approximate)      
+0.5 s      98/385 inevitable (25.5%)    3/6 inevitable (50.0%)      
+1.0 s      72/385 inevitable (18.7%)    4/6 inevitable (66.7%)      
+2.0 s      111/385 inevitable (28.8%)   4/6 inevitable (66.7%)      
+
+HEADLINE (non-reactive, 2.0 s lookahead): 28.8% of collisions were INEVITABLE.
+
+READ: most collisions WERE avoidable given perfect knowledge. The
+  ceiling is a POLICY limitation, not a kinematic one. A control-layer
+  method (CBF-QP, MPC shielding) has genuine headroom -- this is the
+  evidence that would justify spending GPU time on it.
