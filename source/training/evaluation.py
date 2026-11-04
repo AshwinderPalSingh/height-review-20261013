@@ -92,21 +92,6 @@ def evaluate(actor_critic, eval_envs, num_processes, device, config, logging, te
     # is why beeps/episode looked correct and masked the problem.
     baseEnv = eval_envs.venv.envs[0].env.unwrapped
 
-    # Optional inference-time safety shield (cbf_filter.py). OFF unless cbf.enabled is
-    # set in the run's config, so runs without it take the same code path as before.
-    # The filter reads every pedestrian's current state from the env, including any the
-    # policy cannot see, and propagates them at constant velocity; it never reads
-    # ground-truth futures, goals or reactivity flags.
-    _cbf = None
-    if getattr(getattr(config, 'cbf', None), 'enabled', False):
-        from cbf_filter import CBFFilter
-        _cbf = CBFFilter(config,
-                         horizon=int(getattr(config.cbf, 'horizon', 10)),
-                         margin=float(getattr(config.cbf, 'margin', 0.10)),
-                         obstacles=bool(getattr(config.cbf, 'obstacles', False)))
-        logging.info('CBF shield ACTIVE: horizon=%d steps, margin=%.3f m, obstacles=%s',
-                     _cbf.horizon, _cbf.margin, _cbf.obstacles)
-
     t = 0
 
     obs = eval_envs.reset()
@@ -119,18 +104,6 @@ def evaluate(actor_critic, eval_envs, num_processes, device, config, logging, te
         stepCounter = 0
         episode_rew = 0
 
-        # Capture THIS episode's obstacle geometry NOW, before any step. The vec-env
-        # auto-resets when done=True, so reading obstacle_coord after the step loop
-        # returns the NEXT episode's obstacles. That bug shipped in every dump before
-        # 2026-09-17 and invalidated the ICS analysis and the collision figure: 9.4% of
-        # recorded robot positions sat inside "obstacles" that were never there.
-        try:
-            import numpy as _np
-            _episode_obs = _np.asarray(baseEnv.obstacle_coord, dtype=float).tolist()
-        except Exception as _e:
-            _episode_obs = None
-            print('WARNING: obstacle capture failed at episode start (%r)' % (_e,))
-
         global_time = 0.0
         path = 0.0
         too_close = 0.
@@ -138,11 +111,6 @@ def evaluate(actor_critic, eval_envs, num_processes, device, config, logging, te
         episode_min_sep = float('inf')
 
         last_pos = obs['robot_node'][0, 0, 0:2].cpu().numpy()  # robot px, py
-
-        # Per-step trajectory record, for offline Responsibility analysis
-        # (Wenzel & Probst, ICRA-W 2025; arXiv 2509.12890). Kept for collision
-        # episodes only -- see the dump after the outcome branch below.
-        traj_record = []
 
         while not done:
             stepCounter = stepCounter + 1
@@ -156,13 +124,6 @@ def evaluate(actor_critic, eval_envs, num_processes, device, config, logging, te
                         deterministic=True)
             else: # for DWA
                 u, predicted_trajectory, curr_state, action = actor_critic.predict(eval_envs.venv.envs[0].env)
-
-            if _cbf is not None:
-                _a = action.item() if isinstance(action, torch.Tensor) else int(action)
-                _safe = _cbf.filter(baseEnv, _a)
-                if _safe != _a:
-                    action = (torch.tensor([[_safe]], device=action.device)
-                              if isinstance(action, torch.Tensor) else _safe)
 
             if hasattr(test_args, 'random_speak') and test_args.random_speak:
                 import random
@@ -179,19 +140,6 @@ def evaluate(actor_critic, eval_envs, num_processes, device, config, logging, te
 
             if not done:
                 global_time = baseEnv.global_time
-                # react_to_robot is per-human, drawn at spawn from robot.visible_prob
-                # (crowd_sim_var_human.py:285). It is REQUIRED for the ICS analysis:
-                # replaying a human's recorded path under a counterfactual robot action is
-                # exact only for humans the robot did not affect, directly or through a
-                # neighbour that reacted to it.
-                traj_record.append((
-                    global_time,
-                    baseEnv.robot.px, baseEnv.robot.py,
-                    baseEnv.robot.vx, baseEnv.robot.vy,
-                    baseEnv.robot.theta,
-                    [(h.px, h.py, h.vx, h.vy, h.radius,
-                      bool(getattr(h, 'react_to_robot', False))) for h in baseEnv.humans],
-                ))
             if test_args.visualize:
                 eval_envs.render()
 
@@ -268,55 +216,6 @@ def evaluate(actor_critic, eval_envs, num_processes, device, config, logging, te
         # human vocalizing across several steps counts once)
         occluded_heard_counts.append(getattr(baseEnv, '_last_episode_occluded_heard', 0))
         steps_per_episode.append(stepCounter)
-
-        # Dump trajectories for the Responsibility analysis.
-        #
-        # ALL collisions, plus a 1-in-N sample of SUCCESSES. The success sample is the
-        # CONTROL, and it is not optional: with visible_prob=0.2 most pedestrians never
-        # respond to the robot, so a high R_robot may reflect the environment design
-        # rather than anything about the robot's behaviour.
-        # Only a success-vs-collision contrast can tell those apart. Sampling (rather
-        # than dumping all ~3000 successes) keeps the footprint at a few hundred files.
-        # OFF by default: only the Responsibility analysis needs these, and every other
-        # eval would otherwise scatter thousands of pickles into the run directory.
-        # Enable per-run with `env.traj_dump = True` in that run's snapshot config.
-        _outcome = infos[0]['info']
-        _succ_stride = int(getattr(config.env, 'traj_success_stride', 8))
-        if not getattr(config.env, 'traj_dump', False):
-            _succ_stride = -1  # disables the success branch; collision branch guarded below
-        _dump = getattr(config.env, 'traj_dump', False) and (
-            isinstance(_outcome, (CollisionHuman, CollisionObs, CollisionWall)) or (
-            isinstance(_outcome, ReachGoal) and _succ_stride > 0
-            and (success % _succ_stride == 0)))
-        if _dump:
-            import os as _os, pickle as _pickle
-            _tdir = _os.path.join(config.training.output_dir, 'trajectories')
-            _os.makedirs(_tdir, exist_ok=True)
-            with open(_os.path.join(_tdir, 'ep_%05d.pkl' % k), 'wb') as _f:
-                # Obstacle geometry is dumped ONCE per episode (it is static). Without it
-                # the ICS test would count an escape action that drives into a static
-                # obstacle as a successful escape -- biasing toward "avoidable". (The arena
-                # wall is not dumped and the ICS search does not model it.)
-                # obstacle_coord is the env attribute holding world-frame rectangle
-                # vertices; cur_obs_vertices in generate_ob() is a robot-frame LOCAL, not
-                # an attribute, so reading it here would silently yield None.
-                # Use the geometry captured at episode START (see top of loop). Do NOT
-                # re-read baseEnv.obstacle_coord here: the env has already reset.
-                _obs = _episode_obs
-                _pickle.dump({
-                    'episode': k,
-                    'outcome': type(_outcome).__name__,
-                    'robot_radius': baseEnv.robot.radius,
-                    # config.robot.v_max (0.5), NOT robot.v_pref (which is 1.0 and is
-                    # the ORCA preferred-speed field, not the actuator limit).
-                    'robot_v_max': float(getattr(baseEnv.config.robot, 'v_max', 0.5)),
-                    'robot_v_min': float(getattr(baseEnv.config.robot, 'v_min', -0.5)),
-                    'robot_w_max': float(getattr(baseEnv.config.robot, 'w_max', 1.0)),
-                    'time_step': baseEnv.time_step,
-                    'obstacle_vertices': _obs,
-                    'arena_size': getattr(baseEnv.config.sim, 'arena_size', None),
-                    'steps': traj_record,
-                }, _f)
 
         if isinstance(infos[0]['info'], ReachGoal):
             success += 1
@@ -445,13 +344,6 @@ def evaluate(actor_critic, eval_envs, num_processes, device, config, logging, te
             logging.info('per-episode intrusion data written to %s', _dump)
         except Exception as _e:
             logging.info('could not write per-episode intrusion dump: %s', _e)
-
-    if _cbf is not None:
-        _n, _o, _r = _cbf.stats()
-        logging.info('CBF: %d steps checked, %d overridden (%.2f%%)', _n, _o, _r)
-        if _o == 0:
-            logging.info('CBF WARNING: filter NEVER fired -- a null result here says '
-                         'nothing about shielding, only that the margin/horizon are inert.')
 
     logging.info(
         '{:<5} {}has average path length: {:.2f}'.

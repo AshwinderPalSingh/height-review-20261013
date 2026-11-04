@@ -1,13 +1,13 @@
 MIT License
 
 Copyright (c) 2021 Shuijing725
-Copyright (c) 2026 the authors of the accompanying submission (names withheld for double-anonymous review)
+Copyright (c) 2026 Ashwinder Pal Singh
 
-This repository contains analysis code and data produced in a study of the HEIGHT
-crowd-navigation benchmark. The source tree in source/, the evaluation harness in
-code/evaluation.py and the checkpoint in checkpoints/exp_heightpub/ are derived from or
-taken from the HEIGHT codebase (https://github.com/Shuijing725/CrowdNav_HEIGHT), which is
-distributed under the MIT License and whose copyright notice is reproduced above.
+This repository contains the acoustic-navigation lab report and its supporting
+source, checkpoints and evaluation evidence. The source tree and released HEIGHT
+checkpoint derive from the MIT-licensed HEIGHT codebase
+(https://github.com/Shuijing725/CrowdNav_HEIGHT). The upstream copyright notice
+is retained above.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

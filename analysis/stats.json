@@ -1,0 +1,442 @@
+{
+ "runs": {
+  "height": {
+   "episodes": 3500,
+   "success": 3081,
+   "human": 358,
+   "obstacle": 58,
+   "wall": 1,
+   "timeout": 2,
+   "success_pct": 88.02857142857142,
+   "nav_time_mean": 18.07,
+   "nav_time_sd": 4.36,
+   "beeps_per_episode": 0.0,
+   "beeps_per_100_steps": 0.0,
+   "occluded_heard_per_episode": 0.0,
+   "yield_per_beep": "nan",
+   "intrusion_ratio": 5.66,
+   "log_sha256": "75eacea564dda08f654c44f76dca018f34c3392f48de1dda505d3ae65661bcb0"
+  },
+  "nospeak": {
+   "episodes": 3500,
+   "success": 3099,
+   "human": 336,
+   "obstacle": 51,
+   "wall": 5,
+   "timeout": 9,
+   "success_pct": 88.54285714285714,
+   "nav_time_mean": 18.21,
+   "nav_time_sd": 4.41,
+   "beeps_per_episode": 0.0,
+   "beeps_per_100_steps": 0.0,
+   "occluded_heard_per_episode": 0.0,
+   "yield_per_beep": "nan",
+   "intrusion_ratio": 4.75,
+   "log_sha256": "4510e71724afdfc449bb3df71f3046f95e9b3221be3965bd78fe1bdd0103b669"
+  },
+  "noreturn": {
+   "episodes": 3500,
+   "success": 3132,
+   "human": 278,
+   "obstacle": 84,
+   "wall": 0,
+   "timeout": 6,
+   "success_pct": 89.48571428571428,
+   "nav_time_mean": 17.57,
+   "nav_time_sd": 4.27,
+   "beeps_per_episode": 5.06,
+   "beeps_per_100_steps": 2.92,
+   "occluded_heard_per_episode": 0.0,
+   "yield_per_beep": "0.000",
+   "intrusion_ratio": 4.22,
+   "log_sha256": "cf6c7c922c9585e7d2335be84b4a750f68076ee5ae06e808b157903b4529fa53"
+  },
+  "full": {
+   "episodes": 3500,
+   "success": 3136,
+   "human": 293,
+   "obstacle": 67,
+   "wall": 2,
+   "timeout": 2,
+   "success_pct": 89.6,
+   "nav_time_mean": 17.6,
+   "nav_time_sd": 4.09,
+   "beeps_per_episode": 7.62,
+   "beeps_per_100_steps": 4.41,
+   "occluded_heard_per_episode": 2.57,
+   "yield_per_beep": "0.337",
+   "intrusion_ratio": 4.36,
+   "log_sha256": "58ce984eb8e9670edc54adf5be18e38a8ad80c2de5fe33a0847f334bd182fb5c"
+  },
+  "nocal": {
+   "episodes": 3500,
+   "success": 3100,
+   "human": 318,
+   "obstacle": 72,
+   "wall": 4,
+   "timeout": 6,
+   "success_pct": 88.57142857142857,
+   "nav_time_mean": 17.4,
+   "nav_time_sd": 3.91,
+   "beeps_per_episode": 6.58,
+   "beeps_per_100_steps": 3.83,
+   "occluded_heard_per_episode": 2.35,
+   "yield_per_beep": "0.357",
+   "intrusion_ratio": 4.07,
+   "log_sha256": "87a5911c15aab7e1cbb5ccf5642f9092add6fac8be50271199c966c11536da8c"
+  },
+  "full_scenes2": {
+   "episodes": 3500,
+   "success": 3143,
+   "human": 284,
+   "obstacle": 68,
+   "wall": 1,
+   "timeout": 4,
+   "success_pct": 89.8,
+   "nav_time_mean": 17.55,
+   "nav_time_sd": 4.19,
+   "beeps_per_episode": 7.64,
+   "beeps_per_100_steps": 4.42,
+   "occluded_heard_per_episode": 2.61,
+   "yield_per_beep": "0.342",
+   "intrusion_ratio": 4.31,
+   "log_sha256": "f3784d14cbf0faf49eed99d3a26c9c9c58b54c57d1cf7832186fa4ac8411a9cf"
+  },
+  "full_scenes3": {
+   "episodes": 3500,
+   "success": 3130,
+   "human": 303,
+   "obstacle": 59,
+   "wall": 4,
+   "timeout": 4,
+   "success_pct": 89.42857142857143,
+   "nav_time_mean": 17.6,
+   "nav_time_sd": 4.11,
+   "beeps_per_episode": 7.62,
+   "beeps_per_100_steps": 4.39,
+   "occluded_heard_per_episode": 2.58,
+   "yield_per_beep": "0.339",
+   "intrusion_ratio": 4.29,
+   "log_sha256": "5b038f22239909c3c597ca1880e47c3e34c34f2d6017111da720764a4e696c2f"
+  },
+  "nospeak_scenes2": {
+   "episodes": 3500,
+   "success": 3129,
+   "human": 305,
+   "obstacle": 56,
+   "wall": 3,
+   "timeout": 7,
+   "success_pct": 89.4,
+   "nav_time_mean": 18.33,
+   "nav_time_sd": 4.68,
+   "beeps_per_episode": 0.0,
+   "beeps_per_100_steps": 0.0,
+   "occluded_heard_per_episode": 0.0,
+   "yield_per_beep": "nan",
+   "intrusion_ratio": 4.82,
+   "log_sha256": "066c92087b38e0f348de08b003aae85866d8a15ec22fa24d958e811499598fe5"
+  },
+  "nospeak_scenes3": {
+   "episodes": 3500,
+   "success": 3070,
+   "human": 359,
+   "obstacle": 65,
+   "wall": 3,
+   "timeout": 3,
+   "success_pct": 87.71428571428571,
+   "nav_time_mean": 18.11,
+   "nav_time_sd": 4.34,
+   "beeps_per_episode": 0.0,
+   "beeps_per_100_steps": 0.0,
+   "occluded_heard_per_episode": 0.0,
+   "yield_per_beep": "nan",
+   "intrusion_ratio": 4.92,
+   "log_sha256": "c9e0299ccdbbc852288298f454de40105be6899074d4c44467bdc8f029c9aee9"
+  },
+  "humans12_height": {
+   "episodes": 3500,
+   "success": 2728,
+   "human": 672,
+   "obstacle": 91,
+   "wall": 4,
+   "timeout": 5,
+   "success_pct": 77.94285714285714,
+   "nav_time_mean": 19.52,
+   "nav_time_sd": 5.65,
+   "beeps_per_episode": 0.0,
+   "beeps_per_100_steps": 0.0,
+   "occluded_heard_per_episode": 0.0,
+   "yield_per_beep": "nan",
+   "intrusion_ratio": 8.68,
+   "log_sha256": "9db5977adc54939d2f03cae28a6bac0749c84f5fc1403841b6674f42b072edcf"
+  },
+  "humans12_nospeak": {
+   "episodes": 3500,
+   "success": 2764,
+   "human": 621,
+   "obstacle": 95,
+   "wall": 5,
+   "timeout": 15,
+   "success_pct": 78.97142857142858,
+   "nav_time_mean": 19.84,
+   "nav_time_sd": 5.86,
+   "beeps_per_episode": 0.0,
+   "beeps_per_100_steps": 0.0,
+   "occluded_heard_per_episode": 0.0,
+   "yield_per_beep": "nan",
+   "intrusion_ratio": 7.54,
+   "log_sha256": "3c66e222f3d68bfc125ae1cf776ead3709cb5dfb5749e1c7f5a8339ac779545b"
+  },
+  "humans12_noreturn": {
+   "episodes": 3500,
+   "success": 2853,
+   "human": 513,
+   "obstacle": 110,
+   "wall": 4,
+   "timeout": 20,
+   "success_pct": 81.51428571428572,
+   "nav_time_mean": 19.2,
+   "nav_time_sd": 5.65,
+   "beeps_per_episode": 6.16,
+   "beeps_per_100_steps": 3.29,
+   "occluded_heard_per_episode": 0.0,
+   "yield_per_beep": "0.000",
+   "intrusion_ratio": 6.78,
+   "log_sha256": "7c79adbc85d2f7524f91760607ff04f23a597f65ca4caa8d012804bc053cdd12"
+  },
+  "humans12_full": {
+   "episodes": 3500,
+   "success": 2805,
+   "human": 599,
+   "obstacle": 79,
+   "wall": 4,
+   "timeout": 13,
+   "success_pct": 80.14285714285714,
+   "nav_time_mean": 18.93,
+   "nav_time_sd": 5.27,
+   "beeps_per_episode": 8.26,
+   "beeps_per_100_steps": 4.52,
+   "occluded_heard_per_episode": 5.22,
+   "yield_per_beep": "0.632",
+   "intrusion_ratio": 7.14,
+   "log_sha256": "b1dd5689144c244c4eb4fff8e2e486c2644f4174c3648e05d7a5a5f71d7c5d3d"
+  },
+  "obstacles15_height": {
+   "episodes": 3500,
+   "success": 2971,
+   "human": 280,
+   "obstacle": 229,
+   "wall": 7,
+   "timeout": 13,
+   "success_pct": 84.88571428571429,
+   "nav_time_mean": 18.75,
+   "nav_time_sd": 5.12,
+   "beeps_per_episode": 0.0,
+   "beeps_per_100_steps": 0.0,
+   "occluded_heard_per_episode": 0.0,
+   "yield_per_beep": "nan",
+   "intrusion_ratio": 4.68,
+   "log_sha256": "d27bfa1143142b7c7bc609e3b2c2d08a96d23518fc6d150aeec1ae54197ae914"
+  },
+  "obstacles15_nospeak": {
+   "episodes": 3500,
+   "success": 2969,
+   "human": 306,
+   "obstacle": 182,
+   "wall": 9,
+   "timeout": 34,
+   "success_pct": 84.82857142857142,
+   "nav_time_mean": 19.55,
+   "nav_time_sd": 5.78,
+   "beeps_per_episode": 0.0,
+   "beeps_per_100_steps": 0.0,
+   "occluded_heard_per_episode": 0.0,
+   "yield_per_beep": "nan",
+   "intrusion_ratio": 3.71,
+   "log_sha256": "e1008aae92a0c10de9f4adb48477021492cda4eed2cb8fcf01034858749d96fb"
+  },
+  "obstacles15_noreturn": {
+   "episodes": 3500,
+   "success": 3026,
+   "human": 215,
+   "obstacle": 221,
+   "wall": 5,
+   "timeout": 33,
+   "success_pct": 86.45714285714286,
+   "nav_time_mean": 18.36,
+   "nav_time_sd": 4.96,
+   "beeps_per_episode": 6.17,
+   "beeps_per_100_steps": 3.35,
+   "occluded_heard_per_episode": 0.0,
+   "yield_per_beep": "0.000",
+   "intrusion_ratio": 3.47,
+   "log_sha256": "3269f268694dd5fec1eeb84d3c0547c10659d70c446e2b1e3add104513703a57"
+  }
+ },
+ "success_contrasts": {
+  "nospeak_vs_height": {
+   "diff_pp": 0.51,
+   "ci95_pp": [
+    -0.99,
+    2.02
+   ],
+   "z": 0.669,
+   "p": 0.504
+  },
+  "noreturn_vs_nospeak": {
+   "diff_pp": 0.94,
+   "ci95_pp": [
+    -0.52,
+    2.41
+   ],
+   "z": 1.261,
+   "p": 0.207
+  },
+  "full_vs_nospeak": {
+   "diff_pp": 1.06,
+   "ci95_pp": [
+    -0.4,
+    2.52
+   ],
+   "z": 1.417,
+   "p": 0.156
+  },
+  "full_vs_noreturn": {
+   "diff_pp": 0.11,
+   "ci95_pp": [
+    -1.32,
+    1.55
+   ],
+   "z": 0.156,
+   "p": 0.876
+  },
+  "nocal_vs_full": {
+   "diff_pp": -1.03,
+   "ci95_pp": [
+    -2.49,
+    0.43
+   ],
+   "z": -1.38,
+   "p": 0.168
+  },
+  "full_vs_height": {
+   "diff_pp": 1.57,
+   "ci95_pp": [
+    0.1,
+    3.05
+   ],
+   "z": 2.086,
+   "p": 0.037
+  },
+  "ped_collision_full_vs_nospeak": {
+   "diff_pp": -1.23,
+   "ci95_pp": [
+    -2.57,
+    0.11
+   ],
+   "z": -1.797,
+   "p": 0.0723
+  },
+  "humans12_nospeak_vs_height": {
+   "diff_pp": 1.03,
+   "ci95_pp": [
+    -0.9,
+    2.95
+   ],
+   "z": 1.047,
+   "p": 0.295
+  },
+  "humans12_noreturn_vs_height": {
+   "diff_pp": 3.57,
+   "ci95_pp": [
+    1.69,
+    5.45
+   ],
+   "z": 3.716,
+   "p": 0.000202
+  },
+  "humans12_noreturn_vs_nospeak": {
+   "diff_pp": 2.54,
+   "ci95_pp": [
+    0.68,
+    4.41
+   ],
+   "z": 2.672,
+   "p": 0.00755
+  },
+  "humans12_full_vs_noreturn": {
+   "diff_pp": -1.37,
+   "ci95_pp": [
+    -3.22,
+    0.47
+   ],
+   "z": -1.457,
+   "p": 0.145
+  },
+  "humans12_ped_collision_full_vs_noreturn": {
+   "diff_pp": 2.46,
+   "ci95_pp": [
+    0.75,
+    4.17
+   ],
+   "z": 2.812,
+   "p": 0.00492
+  },
+  "obstacles15_nospeak_vs_height": {
+   "diff_pp": -0.06,
+   "ci95_pp": [
+    -1.74,
+    1.62
+   ],
+   "z": -0.067,
+   "p": 0.947
+  },
+  "obstacles15_noreturn_vs_height": {
+   "diff_pp": 1.57,
+   "ci95_pp": [
+    -0.07,
+    3.21
+   ],
+   "z": 1.876,
+   "p": 0.0606
+  },
+  "obstacles15_noreturn_vs_nospeak": {
+   "diff_pp": 1.63,
+   "ci95_pp": [
+    -0.01,
+    3.27
+   ],
+   "z": 1.943,
+   "p": 0.052
+  }
+ },
+ "scene_set_replication": {
+  "per_scene_set_pp": [
+   1.06,
+   0.4,
+   1.71
+  ],
+  "pooled": {
+   "diff_pp": 1.06,
+   "ci95_pp": [
+    0.21,
+    1.9
+   ],
+   "z": 2.456,
+   "p": 0.014
+  },
+  "note": "same two checkpoints on three test-scene sets; not independent training seeds"
+ },
+ "nav_time": {
+  "full_vs_nospeak": {
+   "diff_s": -0.61,
+   "t": -5.66,
+   "p_normal_approx": 1.5e-08
+  },
+  "noreturn_vs_nospeak": {
+   "diff_s": -0.64,
+   "t": -5.82,
+   "p_normal_approx": 5.92e-09
+  }
+ }
+}

@@ -740,9 +740,3 @@ class Config(object):
     planner.replan = False
     planner.replan_freq = 30
     planner.om_inludes_human = False
-
-    cbf = BaseConfig()
-    cbf.enabled = False
-    cbf.obstacles = False
-    cbf.margin = 0.10
-    cbf.horizon = 10

@@ -1,3 +1,0 @@
-pad 0.000  0.5 s  non-reactive [escapable, inevitable] = [379, 6]  reactive = [6, 0]
-pad 0.000  1.0 s  non-reactive [escapable, inevitable] = [382, 3]  reactive = [6, 0]
-pad 0.000  2.0 s  non-reactive [escapable, inevitable] = [381, 4]  reactive = [6, 0]
